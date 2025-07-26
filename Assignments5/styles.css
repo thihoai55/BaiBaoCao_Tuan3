@@ -1,0 +1,226 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    background-color: #F5F5F5;
+    margin: 0 auto;
+    height: max-content;
+}
+.wrapper{
+    background-color:#E84C3D ;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+}
+.ChildItem{
+    display: flex;
+    list-style: none;
+}
+.ChildItem > li{
+    padding: 0 20px;
+    color: #ffff;
+    font-weight: 600;
+}
+
+.homeHOtels{
+    height: 50px;
+    background-color: #E1E1E1;
+    font-weight: 600;
+    color: #ffff;
+    line-height: 3;
+    padding: 0 80px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1000px 1fr;
+    padding: 0 80px;
+    column-gap: 40px;
+    margin-top: 50px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.mainLeftOne{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #ffff;
+}
+.mainItem{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    height: 60px;
+}
+.downUp{
+    padding: 4px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: -1;
+    background-color: #D9D9D9;
+    margin-left: 20px;
+}
+.Name  ,
+.Rating  ,
+.Popularity {
+    display: flex;
+    width: 100px;
+    padding-left: 10px;
+    margin: 0 10px;
+    background-color: #F5F5F5;
+    align-items: center;
+    justify-content: center;
+}
+.fa-caret-up,
+.fa-caret-down{
+    color: #fff;
+}
+.icon > span{
+    background-color: #F5F5F5;
+    padding: 10px;
+}
+
+.item{
+    display: flex;
+    background-color: #ffff;
+}
+.ContentItem{
+    display: flex;
+    border-bottom: 1px solid #F5F5F5;
+    padding:0 10px 10px 0 ;
+    margin-right: 10px;
+    
+}
+.iconContent{
+    display: flex;
+    list-style: none;
+}
+.fa-location-dot{
+    color: #E84C3D;
+    margin-right: 5px;
+}
+.iconContent > li{
+    padding: 0 10px;
+    color: #D9D9D9;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+.title{
+    font-weight: 600;
+}
+.coutry{
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+.salary{
+    background-color:#D9D9D9 ;
+    width: 400px;
+    text-align: center;
+    line-height: 2;
+}
+.bookNow{
+    padding: 15px;
+    background-color: #E84C3D;
+    border: none;
+    color: #ffff;
+    font-weight: 600;
+    margin: 10PX 0;
+}
+
+.salary > ul{
+    list-style: none;
+    display: flex;
+    margin-left: 10px;
+}
+.salary > ul>  li{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #E84C3D;
+    border-radius: 50%;
+    position: relative;
+}
+.liChild{
+    width: 8px;
+    height: 8px;
+    background-color: #E84C3D;
+    border-radius: 50px;
+    position: absolute;
+    right: 22%;
+    top: 19%;
+    
+}
+.hotelSearch{
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    row-gap: 20px;
+}
+        
+.fa-minus,
+.fa-plus{
+    color: #E84C3D;
+    font-size: 13px;
+}
+.plus,.minus{
+    width: 20px;
+    height: 20px;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.Servieces,.NeedHelp,.popularHotel{
+    background-color: #fff;
+    padding: 20px;
+}
+.fa-clock{
+    color: #E84C3D;
+    margin: 13px 10px 0 0;
+}
+/* .ServiecesIcon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+ .taceBtn{
+    height: 35px;
+    margin-top: 6px;
+ }
+ .popularHotel{
+display: flex;
+flex-direction: column;
+row-gap: 20px;
+ }
