@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ccc;
+}
+
+/* Navbar */
+.nav {
+    min-height: 42px;
+    background-color: #EF5122;
+    display: flex;
+
+    /* dùng để tách 2 khối ra xa nhau */
+    justify-content: space-between;
+}
+
+/* Cách này */
+
+/* .nav-list:nth-child(1) {
+  margin-right: auto;
+} */
+
+/* Hoặc cách này */
+/* .nav-list:nth-child(2) {
+  margin-left: auto;
+} */
+
+.nav-list {
+    padding-left: 0;
+    margin: auto 16px;
+}
+
+.nav-item {
+    color: #fff;
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+/* Form layout */
+.form-container {
+    max-width: 720px;
+    padding: 32px;
+    margin: 36px auto 0 auto;
+    background-color: #fff;
+}
+
+.form__row {
+    padding: 8px 0;
+    display: flex;
+}
+
+.form__label {
+    min-width: 90px;
+}
+
+.form__input {
+    /* flex 1: là chiếm trọng số của phần còn lại, 
+    nếu có 3 phần thì chia đều nhau ra */
+    flex: 1;
+}
+
+/* Column layout */
+.column-layout {
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: #fff;
+    display: flex;
+}
+
+.column-item {
+    padding: 0 16px;
+}
+
+/* flex đó là chia cho 3 phần trong từng khoảng trống */
+
+/* có thể sử dụng order để sắp xếp 3 thứ tự mong muốn, order nhỏ thì sẽ đứng trước rồi tiếp đến vừa rồi đến lớn */
+
+.sidebar-one {
+    /* felx 1 là chiếm 1 phần khoảng trống */
+    flex: 1;
+    order: 2;
+}
+
+.sidebar-two {
+    flex: 1;
+    order: 3
+}
+
+.main-column {
+    /* flex 3 là to hơn 3 lần so với 2 flex 1 ở trên */
+    flex: 3;
+    order: 1
+}
+
+/* Feature layout */
+.feature-layout {
+    margin-top: 36px;
+    display: flex;
+    /* justify-content: space-between; không có khoảng trống 2 bên trái và phải
+    space-around: có khảng cách bên tría bên phải = 1/2 của khoảng chính giữ
+    space-evenly: chia đều khoảng cách tất cả*/
+
+    justify-content: space-around;
+
+    /* flex-direction chuyển sang thành hàng */
+    flex-direction: column; 
+    
+}
+
+/* PC, Tablet : định nghĩa lại cho màn hình PC or tablet
+nếu như chiều rộng của màn hình mà lớn hơn 740px thì cài lại thành hàng*/
+@media (min-width: 740px) {
+    .feature-layout {
+        flex-direction: row;
+    }
+}
+
+.feature-item {
+    padding: 12px 16px;
+    margin-top: 16px;
+    /* flexe-basis: chìa cho 3 khuôn khổ bằng nhau */
+    flex-basis: 30%;
+}
+
+.feature-item:nth-child(1) {
+    background-color: rgb(192, 227, 222);
+}
+
+.feature-item:nth-child(2) {
+    background-color: rgb(227, 200, 192);
+}
+
+.feature-item:nth-child(3) {
+    background-color: rgb(226, 192, 227);
+}
+
+/* Wrap layout */
+.wrap-layout {
+    background-color: #fff;
+    margin-top: 36px;
+    padding: 12px 0 32px 0;
+    display: flex;
+    justify-content: space-around;
+    /* wrap là để xuống dòng khi mà mình cho layout nhỏ lại, nó sẽ đảy những phần tử đó xuống dưới 
+    wrap-reverse: nó sẽ đẩy những phần tử đứng đằng sau nhảy lên trên chứ kp thụt xuống dưới*/
+    flex-wrap: wrap-reverse;
+}
+
+.wrap-layout__item {
+    width: 148px;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+    line-height: 90px;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 20px;
+    background-color: #EF5122;
+}
+
+/* Center layout */
+.center-layout {
+    background-color: rgb(192, 227, 194);
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    max-width: 640px;
+    height: 360px;
+    display: flex;
+}
+
+.center-layout__item {
+    font-size: 42px;
+    font-weight: 700;
+    /*
+      Cũng có cách khác là
+      thêm 2 thuộc tính vào flex-container:
+      justify-content: center;
+      align-item: center;
+  
+    */
+    margin: auto;
+}
+
+/* Chart layout */
+.chart-layout {
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: #fff;
+    display: flex;
+    /* chuyển từ bên trên xuống bên dưới dành nguyên cho một cụm lớn*/
+    /* align-items: flex-end; */
+    justify-content: space-around;
+}
+
+.chart-layout__item {
+    /* align-self cũng chuyển từ trên xuống dưới nhưng là chuyển cho chính bản thân nó */
+    align-self: flex-end;
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    /* var() nó sẽ làm theo biến truyền vào, vd: --percent cao 96% thì height đó sẽ cao 96%....*/
+    height: var(--percent);
+    background-color: #EF5122;
+    /* kiểu: animation thực hiện : ease: chuyển động từ từ, linear: chuyển động đều 
+    ease-in: lúc đầu chậm lúc sau nhanh
+    ease-out: lúc đầu nhanh lúc sau chậm*/
+
+    animation: growth ease-out 5s;
+}
+
+/* đây là phần tạp ra cho nó lớn lên dần, tức là nó có động */
+
+@keyframes growth {
+    from {
+        /* độ trong suốt ban đầu =0 */
+        opacity: 0; 
+        /* hàm tính toán cho các cột, từ độ cao ban đầu - 50%*/
+        height: calc(var(--percent) - 50%);
+    }
+    to {
+        /* cho đến độ trong suốt bằng 1 */
+        opacity: 1;
+        /* cho đến độ cao hiện tại */
+        height: var(--percent);
+    }
+}
+
+/* End */
+.the-end {
+    margin: 12px auto 48px auto;
+    padding: 32px 0;
+    max-width: 740px;
+    min-height: 360px;
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.the-end__first {
+    padding: 4px 16px;
+    background-color: #fff;
+    flex: 1;
+}
+
+.the-end__second {
+    flex: 1;
+    display: flex;
+    /* flex-direcotion mặc định là row thì chỉ cần chuyển thành column là 2 hàng sẽ chuyển thành 2 cột 
+    flex-direction : row-reverse là sẽ đảo 2 hàng cho nhau
+    column-reverse đảo 2 cột cho nhau*/
+    flex-direction: column;
+}
+
+.the-end__second-one {
+    flex: 1;
+    padding: 4px 16px;
+    background-color: rgb(227, 192, 214);
+}
+
+.the-end__second-two {
+    flex: 1;
+    padding: 4px 16px;
+    background-color: rgb(192, 210, 227);
+}
+
+
+/* 
+    flex: 1; là cú pháp ngắn của:
+    flex-grow: 1;
+    flex-shrink: 1
+    flex-basis: 1;
+
+    flex-flow: viết tắt của flex-direction và flex-wrap;
+*/
